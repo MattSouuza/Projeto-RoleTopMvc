@@ -1,0 +1,110 @@
+@model RoleTopMVC.ViewModels.DashboardViewModel
+<main>
+    <div id="title">
+        <h2>Administração De Agendamentos</h2>
+    </div>
+
+    <section id="status-pedidos">
+
+        <h3>Histórico De Agendamentos</h3>
+
+        <div id="painel">
+            <div class="aprovados">
+                <h4>Aprovados</h4>
+                <p>(@Model.AgendamentoAprovados)</p>
+            </div>
+            <div class="reprovados">
+                <h4>Reprovados</h4>
+                <p>(@Model.AgendamentoReprovados)</p>
+            </div>
+        </div>
+
+        <table id="table1">
+            <thead>
+                <tr>
+                    <th>Nome Do Evento</th>
+                    <th>Data Do Evento</th>
+                    <th>Tipo De Evento</th>
+                    <th>Status Do Evento</th>
+                    <th>Planos Extras</th>
+                    <th>Número De Pessoas</th>
+                    <th>Preço Total</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach(var agendamento in Model.AgendamentoVerificados )
+                {
+                    <tr>
+                        <td>@agendamento.NomeEvento</td>
+                        <td>@agendamento.DataEvento</td>
+                        <td>@agendamento.TipoEvento</td>
+                        <td>@agendamento.StatusEvento</td>
+                        <td>@agendamento.Planos.Nome</td>
+                        <td>@agendamento.NumeroPessoas</td>
+                        <td>@agendamento.PrecoTotal</td>
+
+                        @if(agendamento.Status.Equals(1))
+                        {
+                            <td>Aprovado</td>
+                        } 
+                        else if (agendamento.Status.Equals(2))
+                        {
+                            <td>Reprovado</td>
+                        } 
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </section>
+
+    <section id="lista-pedidos">
+    
+    <h3>Lista De Agendamentos Pendentes (@Model.AgendamentoPendentes)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome Do Evento</th>
+                    <th>Data Do Evento</th>
+                    <th>Tipo De Evento</th>
+                    <th>Status Do Evento</th>
+                    <th>Planos Extras</th>
+                    <th>Número De Pessoas</th>
+                    <th>Preço Total</th>
+                    <th colspan="2">Aprovar Reprovar</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach(var agendamento in Model.Eventos )
+                {
+                    <tr>
+                        @if(Model.AgendamentoPendentes == 0)
+                        {
+                            <td rowspan="8">Nenhum Agendamento Pendente</td> <!--Isn't working :v-->
+                        }
+                        <td>@agendamento.NomeEvento</td>
+                        <td>@agendamento.DataEvento</td>
+                        <td>@agendamento.TipoEvento</td>
+                        <td>@agendamento.StatusEvento</td>
+                        <td>@agendamento.Planos.Nome</td>
+                        <td>@agendamento.NumeroPessoas</td>
+                        <td>@agendamento.PrecoTotal</td>
+                        <td id="aprova"><a href='@Url.Action("Aprovar", "Agendamento", new {id = @agendamento.Id})'><img src="~/Assets/green-ok-png-icon-12.png" width="20em" height="20em"><i>Aprovar</i></a></td>
+                        <td id="reprova"><a href='@Url.Action("Reprovar", "Agendamento", new {id = @agendamento.Id})'><img src="~/Assets/icone_x.png" width="20em" height="20em"><i>Reprovar</i></a></td>
+                    </tr>
+                }
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td id="foot" colspan="9">
+                        <p>Pedidos atualizados em @DateTime.Now</p>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+</main>

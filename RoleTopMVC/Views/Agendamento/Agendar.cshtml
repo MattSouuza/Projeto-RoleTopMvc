@@ -1,0 +1,68 @@
+<main>
+
+    <section id="titles">
+
+        <h1><em><strong> Insira Suas Informações </strong></em></h1>
+
+        <div class="h2s">
+            <button><h2>Suas Informações</h2></button>
+            <button><h2>Informações Do Evento</h2></button>
+            <button><h2>Pagamento</h2></button>
+        </div>
+
+    </section>
+
+<section id="abraco">
+
+    <form class="information" method="POST" action='@Url.Action("AgendamentoProcesso1", "Agendamento")'>
+
+        <fieldset id="name-section">
+
+            <label for="name-text">Nome:</label>
+            <input type="text" name="nName" id="name-text" maxlength="100" value="@Model.Cliente.Nome" placeholder="Nome Completo Ou Nome Da Empresa" required>
+        
+        </fieldset>
+
+        <fieldset id="cpf-section">
+
+                <label for="cpf-text">CPF ou CNPJ:</label>
+                <input type="text" name="nCpf" id="cpf-text" maxlength="14" value="@Model.Cliente.Cpf" placeholder="XXX.XXX.XXX-YY (CPF) Ou XX.XXX.XXX/YYYY-ZZ (CNPJ)" required>
+            
+        </fieldset>
+
+        <fieldset id="email-section">
+
+            <label for="email-text">Email Para Contato:</label>
+            <input type="email" name="nEmail" id="email-text"  value="@Model.Cliente.Email" required>
+            
+        </fieldset>
+
+        <fieldset id="phone-section">
+
+                <label for="phone-text">Telefone Para Contato:</label>
+                <input type="text" name="nPhone" id="phone-text" placeholder="(XX)-9xxxx-xxxx" value="@Model.Cliente.Telefone" maxlength="15">
+            
+        </fieldset>
+        
+<div id="alinha">
+
+        <div id="button">
+
+            <button type="submit"action='@Url.Action("Agendar2", "Agendamento2")'>Confirmar</button>
+            
+        </div>
+        
+        
+    </form>
+    
+    <form id="cancel" action='@Url.Action("Index", "Home")' method="POST">
+
+            <button type="submit">Voltar</button>
+        
+    </form>
+
+</div>
+
+</section>
+
+</main>

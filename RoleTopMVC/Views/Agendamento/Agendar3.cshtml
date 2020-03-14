@@ -1,0 +1,144 @@
+@model RoleTopMVC.ViewModels.AgendamentoViewModel
+
+<main>
+
+    <section id="titles">
+
+        <h1><em><strong> Insira As Informações De Pagamento</strong></em></h1>
+
+        <div class="h2s">
+
+            <form id="Finfo-you" asp-controller="Agendamento" asp-action="Agendar" method="GET">
+
+            <button type="submit" id="Binfo-you"><h2>Suas Informações</h2></button>
+            
+            </form>
+
+            <form id="Finfo-event" asp-controller="Agendamento" asp-action="Agendar2" method="GET">
+
+                <button type="submit" id="Binfo-event"><h2>Informações Do Evento</h2></button>
+
+            </form>
+
+            <form id="Fpaga">
+
+                <button><h2>Pagamento</h2></button>
+            
+            </form>
+
+        </div>
+
+    </section>
+
+    <section id="opt-pag">
+        
+        <h1>Opções De Pagamento</h1>
+        
+        <div class="option">
+            
+            <form id="credito">
+                
+                <button type="submit">Cartão De Crédito</button>
+                
+            </form>
+            
+            <form id="debito" action="agendamento-debito.html" method="POST">
+                
+                <button type="submit">Cartão De Débito</button>
+                
+            </form>
+            
+            <form id="boleto" action="agendamento-boleto.html" method="POST">
+                
+                <button type="submit">Boleto Bancário</button>
+                
+            </form>
+            
+        </div>
+    
+    </section>
+    
+    <section id="abraco">
+
+        <div class="credito-section">
+
+            <h1>Cartão De Crédito</h1>
+
+            <form action='@Url.Action("AgendamentoProcesso3","Agendamento")' method="POST">
+                
+                <div id="alinhament">
+                    
+                    <fieldset>
+
+                        <label for="name">Nome Do Proprietário</label>
+                        <input id="name" name="name" maxlength="45" required>
+        
+                    </fieldset>
+
+                    <fieldset>
+
+                        <label for="number">Número Do Cartão</label>
+                        <input id="number" name="number" placeholder="XXX.XXX.XXX-YY" maxlength="14" required>
+
+                    </fieldset>
+                    
+                    <fieldset>
+                    
+                        <label for="code">Código De Segurança</label>
+                        <input id="code" name="code" placeholder="XXX" maxlength="3" size="3" required>
+
+                    </fieldset>
+                
+                </div>
+
+                <div id="alinhament2">
+
+                    <fieldset>
+
+                        <label for="cpf">CPF</label>
+                        <input id="cpf" name="cpf" placeholder="XXX.XXX.XXX-YY" maxlength="14" required>
+
+                    </fieldset>
+
+                    <fieldset>
+    
+                        <label for="date">Data De Validade:</label>
+                        <input type="date" name="date" id="date" min="2019-09-12" max="2034-12-31" required>
+                        
+                    </fieldset>
+
+                </div>
+
+                    <fieldset>
+
+                        <label for="value">Valor Total:</label>
+                        @foreach( var agendamento in Model.Eventos )
+                        {
+                            <input id="value" name="value" value="R$@agendamento.PrecoTotal" readonly>
+                        }
+                        
+                    </fieldset>
+
+<div id="alinha">
+
+                    <div id="button">
+    
+                        <button type="submit">Confirmar</button>
+                        
+                    </div>
+                        
+            </form>
+                    
+            <form id="cancel" action='@Url.Action("Agendar2", "Agendamento")' method="GET">
+
+                    <button type="submit">Voltar</button>
+                
+            </form>
+
+</div>   
+
+        </div>
+        
+    </section>
+
+</main>

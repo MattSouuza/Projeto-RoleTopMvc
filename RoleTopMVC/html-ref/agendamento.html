@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="agendamento.css">
+    <title>Rolê Top - Agendamento</title>
+</head>
+
+<body>
+    
+    <header>
+
+            <nav>
+                
+                <ul class="menu-nav">
+                    <img id="logo-area" src="Assets/logomaneira.png" alt="Logo Da Rolê Top" width="90em" height="90em">
+                    
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="agendamento.html">Agendamento</a></li>
+                    <li><a href="calendario.html">Calendário De Eventos</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="perguntas">Perguntas</a></li>
+                    <li><a href="quem-somos">Quem Somos</a></li>
+                    <li id="login"><a href="login.html"> <img src="Assets/login_useraa.png" alt="login" width="20em" height="20em"> </a>Login</li>
+                </ul>
+                
+            </nav>
+            
+        </header>
+            
+        <main>
+
+            <section id="titles">
+
+                <h1><em><strong> Insira Suas Informações </strong></em></h1>
+
+                <div class="h2s">
+                    <button><h2>Suas Informações</h2></button>
+                    <button><h2>Informações Do Evento</h2></button>
+                    <button><h2>Pagamento</h2></button>
+                </div>
+
+            </section>
+
+
+        <section id="abraco">
+
+            <form class="information" action="agendamento2.html" method="POST">
+
+                <fieldset id="name-section">
+
+                    <label for="name-text">Nome:</label>
+                    <input type="text" name="nName" id="name-text" maxlength="100" placeholder="Nome Completo Ou Nome Da Empresa" required>
+                
+                </fieldset>
+
+                <fieldset id="cpf-section">
+
+                        <label for="cpf-text">CPF ou CNPJ:</label>
+                        <input type="text" name="nCpf" id="cpf-text" maxlength="14" placeholder="XXX.XXX.XXX-YY (CPF) Ou XX.XXX.XXX/YYYY-ZZ (CNPJ)" required>
+                    
+                </fieldset>
+    
+                <fieldset id="email-section">
+
+                    <label for="email-text">Email Para Contato:</label>
+                    <input type="email" name="nEmail" id="email-text" required>
+                    
+                </fieldset>
+    
+                <fieldset id="phone-section">
+
+                        <label for="phone-text">Telefone Para Contato:</label>
+                        <input type="text" name="nPhone" id="phone-text" placeholder="(XX)-9xxxx-xxxx" maxlength="15">
+                    
+                </fieldset>
+                
+    <div id="alinha">
+
+                <div id="button">
+
+                    <button type="submit">Confirmar</button>
+                    
+                </div>
+                
+                
+            </form>
+            
+            <form id="cancel" action="home.html" method="POST">
+
+                    <button type="submit">Voltar</button>
+                
+            </form>
+
+    </div>
+
+        </section>
+
+        </main>
+
+    <footer>
+
+        <address>
+
+            <p>Entre Em Contato: </p>
+
+            <p>Telefone:  XXXX-XXXX </p>
+                    
+            <p>Email: roletop@hotmail.com </p>
+
+            <p>Endereço: </p>
+
+            <p>Rua Alameda Barão De Limeira, 539 - Santa Cecília, São Paulo</p>
+
+        </address>
+
+        <div id="facebook">
+
+            <a href="https://www.facebook.com/RolêTop-106506047400870/?modal=admin_todo_tour">
+
+                <img src="Assets/Facebook_Logo_(2019).png" alt="Nossa Página No Facebook">
+
+            </a>
+        
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

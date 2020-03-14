@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="agendamento3.css">
+    <title>Rolê Top - Agendamento</title>
+</head>
+<body>
+    
+    <header>
+
+        <nav>
+
+                <ul class="menu-nav">
+
+                    <img id="logo-area" src="Assets/logomaneira.png" alt="Logo Da Rolê Top" width="90em" height="90em">
+                    
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="agendamento.html">Agendamento</a></li>
+                    <li><a href="calendario.html">Calendário De Eventos</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="perguntas">Perguntas</a></li>
+                    <li><a href="quem-somos">Quem Somos</a></li>
+                    <li id="login"><a href="login.html"> <img src="Assets/login_useraa.png" alt="login" width="20em" height="20em"> </a>Login</li>
+                
+                </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section id="titles">
+
+            <h1><em><strong> Insira As Informações De Pagamento</strong></em></h1>
+
+            <div class="h2s">
+
+                <form id="Finfo-you" action="agendamento.html" method="GET">
+
+                <button type="submit" id="Binfo-you"><h2>Suas Informações</h2></button>
+                
+                </form>
+
+                <form id="Finfo-event" action="agendamento2.html" method="GET">
+
+                    <button type="submit" id="Binfo-event"><h2>Informações Do Evento</h2></button>
+
+                </form>
+
+                <form id="Fpaga">
+
+                    <button><h2>Pagamento</h2></button>
+                
+                </form>
+
+            </div>
+
+        </section>
+
+        <section id="opt-pag">
+            
+            <h1>Opções De Pagamento</h1>
+            
+            <div class="option">
+                
+                <form id="credito" action="agendamento3.html" method="POST">
+                    
+                    <button type="submit">Cartão De Crédito</button>
+                    
+                </form>
+                
+                <form id="debito" action="agendamento-debito.html" method="POST">
+                    
+                    <button type="submit">Cartão De Débito</button>
+                    
+                </form>
+                
+                <form id="boleto" action="agendamento-boleto.html" method="POST">
+                    
+                    <button type="submit">Boleto Bancário</button>
+                    
+                </form>
+                
+            </div>
+        
+        </section>
+        
+        <section id="abraco">
+
+            <div class="credito-section">
+
+                <h1>Cartão De Crédito</h1>
+
+                <form action="home.html" method="POST">
+                    
+                    <div id="alinhament">
+                        
+                        <fieldset>
+
+                            <label for="name">Nome Do Proprietário</label>
+                            <input id="name" maxlength="45" required>
+            
+                        </fieldset>
+
+                        <fieldset>
+
+                            <label for="number">Número Do Cartão</label>
+                            <input id="number" placeholder="XXX.XXX.XXX-YY" maxlength="14" required>
+
+                        </fieldset>
+                        
+                        <fieldset>
+                        
+                            <label for="code">Código De Segurança</label>
+                            <input id="code" placeholder="XXX" maxlength="3" size="3" required>
+    
+                        </fieldset>
+                    
+                    </div>
+
+                    <div id="alinhament2">
+
+                        <fieldset>
+
+                            <label for="cpf">CPF</label>
+                            <input id="cpf" placeholder="XXX.XXX.XXX-YY" maxlength="14" required>
+
+                        </fieldset>
+
+                        <fieldset>
+        
+                            <label for="date">Data De Validade:</label>
+                            <input type="date" id="date" min="2019-09-12" max="2034-12-31" required>
+                            
+                        </fieldset>
+
+                    </div>
+
+                        <fieldset>
+
+                            <label for="value">Valor Total:</label>
+                            <input id="value" value="R$10.000,00" readonly>
+                            
+                        </fieldset>
+
+    
+    <div id="alinha">
+    
+                        <div id="button">
+        
+                            <button type="submit">Confirmar</button>
+                            
+                        </div>
+                            
+                </form>
+                        
+                <form id="cancel" action="agendamento2.html" method="POST">
+    
+                        <button type="submit">Voltar</button>
+                    
+                </form>
+
+    </div>   
+       
+            </div>
+            
+        </section>
+
+    </main>
+
+    <footer>
+
+            <address>
+    
+                <p>Entre Em Contato: </p>
+    
+                <p>Telefone:  XXXX-XXXX </p>
+                        
+                <p>Email: roletop@hotmail.com </p>
+    
+                <p>Endereço: </p>
+    
+                <p>Rua Alameda Barão De Limeira, 539 - Santa Cecília, São Paulo</p>
+    
+            </address>
+    
+            <div id="facebook">
+    
+                <a href="https://www.facebook.com/RolêTop-106506047400870/?modal=admin_todo_tour">
+    
+                    <img src="Assets/Facebook_Logo_(2019).png" alt="Nossa Página No Facebook">
+    
+                </a>
+            
+            </div>
+    
+        </footer>
+
+</body>
+</html>

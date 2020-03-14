@@ -1,0 +1,59 @@
+<main>
+
+    <section class="login-area">
+        
+        <div id="haha">
+
+            <h1>Faça Seu Login</h1>
+            
+            <img src="~/Assets/anonimo2.jpg" alt="Foto Do Perfil">
+
+        </div>
+        
+<div id="special">
+
+        <form id="information" action='@Url.Action("Login", "Login")' method="POST">
+
+            <fieldset id="mail">
+
+                <input type="email" placeholder="Seu Email" maxlength="40" name="email" required>
+            
+            </fieldset>
+
+            <fieldset id="password">
+
+                <input type="password" placeholder="Sua Senha" maxlength="15" name="senha" required>
+            
+            </fieldset>
+
+            <div id="alinha">
+
+                <div id="conf">
+
+                    <button type="submit">Confirmar</button>
+                    
+                </div>
+        
+        </form>
+
+                <form id="cancel" asp-controller="Home" asp-action="Index" method="POST">
+                    
+                    <button type="submit">Voltar</button>
+                    
+                </form>
+                
+            </div>
+
+</div>
+
+        <div id="links">
+
+            <form action='@Url.Action("Index", "Cadastro")'>
+                <button id="cadastro"><p>Não Possui Cadastro?</p></a></button>
+            </form>
+
+        </div>
+
+    </section>
+
+</main>

@@ -1,0 +1,35 @@
+<main>
+    <section id="status-pedidos">
+
+        <h3>Histórico De Agendamentos</h3>
+
+        <table id="table1">
+            <thead>
+                <tr>
+                    <th>Nome Do Evento</th>
+                    <th>Data Do Evento</th>
+                    <th>Tipo De Evento</th>
+                    <th>Status Do Evento</th>
+                    <th>Número De Pessoas</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach(var agendamento in Model.AgendamentoVerificados )
+                {
+                    @if(agendamento.Status.Equals(1))
+                    {
+                        <tr>
+                            <td>@agendamento.NomeEvento</td>
+                            <td>@agendamento.DataEvento</td>
+                            <td>@agendamento.TipoEvento</td>
+                            <td>@agendamento.StatusEvento</td>
+                            <td>@agendamento.NumeroPessoas</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+
+    </section>
+</main>

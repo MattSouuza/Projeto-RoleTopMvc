@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a, li ,p, h1, h2, h3, h4, h5, h6, th, td {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+body {
+    background-color: rgb(17, 17, 17);
+    display: flex;
+    flex-direction: column;
+}
+
+/*=======================================================
+
+                    Nav. - Start
+
+=======================================================*/
+
+header nav .menu-nav #logo-area {
+    margin: 0em .5em 0em 3.5em;
+}
+
+header nav .menu-nav  {
+    display: flex;
+    align-items: center;
+}
+
+.menu-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav li {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.menu-nav li {
+    padding: 2em;
+    margin: 0;
+}
+
+.menu-nav #login img {
+    margin: 0 .6em;
+}
+
+#login {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: auto;
+}
+
+.menu-nav li:hover {
+    background-color: #202020;
+    color: #383838;
+    box-shadow: 0 3px white;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    background-color:  #7d0093;
+}
+
+/*=======================================================
+
+                    Nav. - End
+
+=======================================================*/
+
+/*=======================================================
+
+                    Content - Start
+
+=======================================================*/
+main{
+    margin-bottom: 9.76em;
+}
+
+hgroup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5em;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+hgroup h2{
+    margin: .5em 0 .5em 0;
+}
+
+#alinha{
+    display: flex;
+    flex-direction: column;
+}
+
+#tabela{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    text-align: center;
+    word-break: normal;
+    border-radius: 2em 0 2em 0;
+    padding: 1em;
+    background-color: #7d0093;
+    border-style: none;
+    outline: 0;
+    color: white;
+    box-shadow: 0 8px #520061;
+    text-decoration: none;
+}
+
+table th{
+    background-color: #ffc600;
+    padding: .5em;
+    color: #7d0093;
+}
+
+table th:first-child{
+    border-radius: 1em 0 0 0;
+}
+
+table th:last-child{
+    border-radius: 0 0 1em 0;
+}
+
+table tbody tr td{
+    padding: 1em;
+}
+
+#alinha{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-content: center;
+    margin: 2em;
+}
+
+#voltar-botao button {
+    border-radius: 2em 0 2em 0;
+    padding: 1em;
+    background-color: #7d0093;
+    border-style: none;
+    outline: 0;
+    color: #ffc600;
+    box-shadow: 0 8px #520061;
+    text-decoration: none;
+    margin: 2em 0;
+}
+
+#voltar-botao button p {
+    font-size: 2em;
+}
+
+button:active {
+    background-color: #7d0093;
+    box-shadow: 0 4px #520061;
+    transform: translateY(4px);
+}
+
+/*=======================================================
+
+                    Content - End
+
+=======================================================*/
+
+/*=======================================================
+
+                    Footer - Start
+
+=======================================================*/
+
+footer {
+    background-color: #7d0093;
+}
+
+footer address {
+    color: #ffffff;
+    padding: 1em;
+}
+
+footer img {
+    width: 5em;
+    height: 5em;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+address {
+    justify-content: center;
+}
+
+#facebook {
+    align-self: center;
+    padding: 1em;
+}
+
+/*=======================================================
+
+                    Footer - End
+
+=======================================================*/

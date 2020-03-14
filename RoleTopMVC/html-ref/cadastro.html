@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="cadastro.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rolê Top - Cadastro</title>
+
+</head>
+<body>
+    
+    <header>
+
+        <nav>
+            
+            <ul class="menu-nav">
+                <img id="logo-area" src="Assets/logomaneira.png" alt="Logo Da Rolê Top" width="90em" height="90em">
+                
+                <li><a href="home.html">Home</a></li>
+                <li><a href="agendamento.html">Agendamento</a></li>
+                <li><a href="calendario.html">Calendário De Eventos</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="perguntas">Perguntas</a></li>
+                <li><a href="quem-somos">Quem Somos</a></li>
+                <li id="login"><a href="login.html"> <img src="Assets/login_useraa.png" alt="login" width="20em" height="20em"> </a>Login</li>
+            </ul>
+            
+        </nav>
+            
+    </header>
+
+    <main>
+        
+        <h1>Cadastre-se</h1>
+
+        <section id="abraco">
+
+
+            <form class="information" action="home.html" method="POST">
+
+                    <fieldset id="name-section">
+
+                        <label for="name-text">Seu Nome:</label>
+                        <input type="text" name="nName" id="name-text" placeholder="Nome Completo" maxlength="100" required>
+                    
+                    </fieldset>
+
+                    <fieldset id="cpf-section">
+
+                        <label for="cpf-text">CPF ou CNPJ:</label>
+                        <input type="text" name="nCpf" id="cpf-text" maxlength="14" placeholder="XXX.XXX.XXX-YY (CPF) Ou XX.XXX.XXX/YYYY-ZZ (CNPJ)" required>
+                    
+                    </fieldset>
+
+                    <fieldset id="email-section">
+
+                        <label for="email-text">Email:</label>
+                        <input type="email" name="nEmail" id="email-text" required>
+                        
+                    </fieldset>
+
+                    <fieldset id="password-section">
+
+                        <label for="password-text">Senha:</label>
+                        <input type="password" name="nPassword" id="password-text" required>
+                        
+                    </fieldset>
+
+                    <fieldset id="password2-section">
+
+                        <label for="password2-text">Confirmar Senha:</label>
+                        <input type="password" name="nPassword2" id="password2-text" required>
+                        
+                    </fieldset>
+        
+                    <fieldset id="phone-section">
+    
+                        <label for="phone-text">Telefone:</label>
+                        <input type="text" name="nPhone" id="phone-text" placeholder="(XX)-9xxxx-xxxx" maxlength="15">
+                        
+                    </fieldset>
+
+                    <fieldset id="check-section">
+
+                        <Label for="check">Li E Concordo Com Os <a href="termos.html">Termos De Contrato</a></Label>
+                        <input type="checkbox" name="nCheck" id="check" required>
+                    
+                    </fieldset>
+
+    <div id="alinha">
+
+                    <div id="button">
+
+                        <button type="submit">Confirmar</button>
+                        
+                    </div>
+                    
+                    
+                </form>
+                
+                <form id="cancel" action="login.html" method="POST">
+
+                        <button type="submit">Voltar</button>
+                    
+                </form>
+
+    </div>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+
+        <address>
+
+        <p>Entre Em Contato: </p>
+
+        <p>Telefone:  XXXX-XXXX </p>
+                
+        <p>Email: roletop@hotmail.com </p>
+
+        <p>Endereço: </p>
+
+        <p>Rua Alameda Barão De Limeira, 539 - Santa Cecília, São Paulo</p>
+
+        </address>
+
+        <div id="facebook">
+
+            <a href="https://www.facebook.com/RolêTop-106506047400870/?modal=admin_todo_tour">
+
+                <img src="Assets/Facebook_Logo_(2019).png" alt="Nossa Página No Facebook">
+
+            </a>
+        
+        </div>
+
+    </footer>
+
+</body>
+</html>

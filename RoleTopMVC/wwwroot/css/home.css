@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, li ,p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+body {
+    background-color: rgb(229, 238, 238);
+}
+
+
+/*=======================================================
+
+Nav. - Start
+
+=======================================================*/
+
+header nav .menu-nav #logo-area {
+    margin: 0em .5em 0em 3.5em;
+}
+
+header nav .menu-nav  {
+    display: flex;
+    align-items: center;
+}
+
+.menu-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav li {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.menu-nav li {
+    padding: 2em;
+    margin: 0;
+}
+
+nav li {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-nav #login img {
+    margin: 0 .6em;
+}
+
+#login {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: auto;
+}
+
+.menu-nav li:hover {
+    background-color: #202020;
+    color: #383838;
+    box-shadow: 0 3px white;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    background-color:  #7d0093;
+}
+
+/*=======================================================
+
+Nav. - End
+
+=======================================================*/
+
+/*=======================================================
+
+Banner - Start
+
+=======================================================*/
+
+.banner {
+    display: flex;
+    justify-content: center;
+    background-image: url(../Assets/festas-populares-pelo-mundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: .5em;
+}
+
+.banner h1 {
+    font-size: 75px;
+    background-image: url(../Assets/logomaneiraroxaooo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 3em;
+    color: #ffc600;
+    text-shadow: -3px 3px 0 #7d0093;
+}
+
+/*=======================================================
+
+Banner - End
+
+=======================================================*/
+
+/*=======================================================
+
+Sobre - Start
+
+=======================================================*/
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../Assets/DSA.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 0 0 8px #7d0093, 0 0 6px #ffc600;
+}
+
+.sobre h2 {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    margin: .7em 0 .7em 0;
+}
+
+.sobre p {
+    max-width: 75em;
+    align-items: flex-start;
+}
+
+#texto-sobre {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 2em 0;
+}
+
+.sobre .fundadores {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sobre .fundadores #ale img, #cesar img {
+    border-radius: 10em;
+}
+
+.sobre .fundadores p {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2em;
+    margin: .5em 0;
+}
+
+#botao-sobre {
+    display: flex;
+    align-self: center;
+}
+
+#botao-sobre button {
+    font-size: .5em;
+    background-color: #7d0093;
+    box-shadow: 0 8px #520061;
+    border-style: none;
+    outline: none;
+    
+    width: 40em;
+    height: 10em;
+    border-radius: 1em;
+    margin: 1em 0;
+}
+
+#botao-sobre {
+    justify-content: center;
+    align-items: center;
+}
+
+#botao-sobre p  {
+    font-size: 4em;
+    text-decoration: none;
+    color: #ffc600;
+}
+
+button:active {
+    background-color: #7d0093;
+    box-shadow: 0 4px #520061;
+    transform: translateY(4px);
+}
+
+/*=======================================================
+
+Sobre - End
+
+=======================================================*/
+
+/*=======================================================
+
+Agendamento - Start
+
+=======================================================*/
+
+.agende-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #202020;
+    color: #ffc600;
+    text-shadow: 0 0 6px #7d0093, 0 0 3px #ffc600;
+    font-size: 1.2em;
+}
+
+.agende-home h2 {
+    margin: .7em 0 1em 0;
+}
+
+.agende-home p {
+    margin: .5em 0;
+}
+
+.agende-home #lado {
+    display: flex;
+    flex-direction: row;
+    margin: 2em 1em
+}
+
+.agende-home #lado img, iframe {
+    width: 35em;
+    height: 20em;
+    border-radius: 1em;
+}
+
+.agende-home #lado #botao-a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.agende-home #lado,#botao-a {
+    justify-content: space-between;
+    margin: 3em .7em;
+}
+
+.agende-home #lado p {
+    max-width: 30em;
+}
+
+#agenda-botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#agenda-botao button {
+    border-radius: 2em 0 2em 0;
+    padding: 1em;
+    background-color: #7d0093;
+    border-style: none;
+    outline: 0;
+    color: #ffc600;
+    box-shadow: 0 8px #520061;
+    text-decoration: none;
+}
+
+#agenda-botao button p {
+    font-size: 3em;
+}
+
+button:active {
+    background-color: #7d0093;
+    box-shadow: 0 4px #520061;
+    transform: translateY(4px);
+}
+
+/*=======================================================
+
+                    Agendamento - End
+
+=======================================================*/
+
+/*=======================================================
+
+                    Footer - Start
+
+=======================================================*/
+
+footer {
+    background-color: #7d0093;
+}
+
+footer address {
+    color: #ffffff;
+    padding: 1em;
+}
+
+footer img {
+    width: 5em;
+    height: 5em;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+address {
+    justify-content: center;
+}
+
+#facebook {
+    align-self: center;
+    padding: 1em;
+}
+
+/*=======================================================
+
+                    Footer - End
+
+=======================================================*/

@@ -1,0 +1,75 @@
+@model RoleTopMVC.ViewModels.PagUsuarioViewModel
+@{
+    ViewData["H2"] = "Histórico de Agendamentos";
+}
+
+<main>
+
+    <header>
+        <hgroup>
+            <h1>RolêTop</h1>
+            <h2>@ViewData["H2"]</h2>
+        </hgroup>
+    </header>
+
+    
+        <div id="tabela">
+            <div id="alinha">
+
+                <form id="info-botao" action='@Url.Action("Info","Login")' method="GET">
+                    <button type ="submit"><p>Minhas Informações</p></button>
+                </form>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome Do Cliente</th>
+                            <th>Nome Do Evento</th>
+                            <th>Data Do Evento</th>
+                            <th>Tipo De Evento</th>
+                            <th>Status Do Evento</th>
+                            <th>Planos Extras</th>
+                            <th>Número De Pessoas</th>
+                            <th>Preço Total</th>
+                            <th>Status Do Agendamento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach( var agendamento in Model.Eventos )
+                        {
+                            <tr>
+                                <td>@agendamento.Cliente.Nome</td>
+                                <td>@agendamento.NomeEvento</td>
+                                <td>@agendamento.DataEvento</td>
+                                <td>@agendamento.TipoEvento</td>
+                                <td>@agendamento.StatusEvento</td>
+                                <td>@agendamento.Planos.Nome</td>
+                                <td>@agendamento.NumeroPessoas</td>
+                                <td>@agendamento.PrecoTotal</td>
+                                @if(agendamento.Status.Equals(0))
+                                {
+                                    <td>Pendente</td>
+                                } 
+                                else if (agendamento.Status.Equals(1))
+                                {
+                                    <td>Aprovado!</td>
+                                } 
+                                else if (agendamento.Status.Equals(2))
+                                {
+                                    <td>Reprovado</td>
+                                }
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <div id="botao">
+            <form id="agenda-botao" action='@Url.Action("Agendar","Agendamento")' method="GET">
+                <button type ="submit"><p>Faça Um Novo Agendamento</p></button>
+            </form>
+        </div>
+
+</main>

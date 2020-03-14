@@ -1,0 +1,144 @@
+﻿@model RoleTopMVC.ViewModels.BaseViewModel
+
+@{
+    var cssView = (string) ViewData["NomeView"];
+    var textoView = (string) ViewData["TextoView"];
+}
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+        <title>Rolê Top</title>
+
+        @if("Home".Equals(cssView))
+        {
+            <link rel="stylesheet" type="text/css" href="~/css/home.css">
+        } 
+        else if ("Agendamento".Equals(cssView))
+        {
+            <link rel="stylesheet" type="text/css" href="~/css/agendamento.css">
+        } 
+        else if ("Agendamento2".Equals(cssView))
+        {
+            <link rel="stylesheet" type="text/css" href="~/css/agendamento2.css">
+        }
+        else if ("Agendamento3".Equals(cssView))
+        {
+            <link rel="stylesheet" type="text/css" href="~/css/agendamento3.css">
+        } 
+        else if ("Login".Equals(cssView))
+        {
+            <link rel="stylesheet" type="text/css" href="~/css/login.css">
+        }
+        else if ("PagUsuario".Equals(cssView))
+        {
+            <link rel="stylesheet" type="text/css" href="~/css/pagUsuario.css">
+        }
+        else if ("Info".Equals(cssView))
+        {
+            <link rel="stylesheet" type="text/css" href="~/css/info.css">
+        }
+        else if ("Dashboard".Equals(cssView))
+        {
+            <link rel="stylesheet" type="text/css" href="~/css/adm.css">
+        }
+        else if ("Calendario".Equals(cssView))
+        {
+            <link rel="stylesheet" type="text/css" href="~/css/adm.css">
+        }
+        else if ("Cadastro".Equals(cssView))
+        {
+            <link rel="stylesheet" type="text/css" href="~/css/cadastro.css">
+        }
+        else if ("QuemSomos".Equals(cssView))
+        {
+            <link rel="stylesheet" type="text/css" href="~/css/quem-somos.css">
+        }
+        else if ("Galeria".Equals(cssView))
+        {
+            <link rel="stylesheet" type="text/css" href="~/css/galeria.css">
+        }
+        else if("SucessoErro".Equals(cssView))
+        {
+            <link rel="stylesheet" type="text/css" href="~/css/sucessoErro.css">
+        }
+
+
+    </head>
+
+    <body>
+    
+    <header>
+
+        <nav>
+            
+            <ul class="menu-nav">
+                <a asp-controller="Home" asp-action="Index"><img id="logo-area" src="~/Assets/logomaneira.png" alt="Logo Da Rolê Top" width="90em" height="90em"></a>
+                
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Agendamento" asp-action="Agendar">Agendamento</a></li>
+                <li><a asp-controller="Calendario" asp-action="Index">Calendário De Eventos</a></li>
+                <li><a asp-controller="Galeria" asp-action="Index">Galeria</a></li>
+                <li><a asp-controller="QuemSomos" asp-action="quemSomos">Quem Somos</a></li>
+                @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
+                {
+                    <li id="login"><a asp-controller="Login" asp-action="Index"> <img src="~/Assets/login_useraa.png" alt="login" width="20em" height="20em">Login/ Cadastro</a></li>
+                }
+                else
+                {
+                    if("admin@com".Equals(@Model.UsuarioEmail))
+                    {
+                        <li id="admPage"><a asp-controller="Adm" asp-action="Dashboard">Administração</a></li>
+                    }
+                    else
+                    {
+                        <li id="userPage"><a asp-controller="Login" asp-action="PagUsuario">Perfil</a></li>
+                    }
+                    <li id="login"><a asp-controller="Login" asp-action="Logoff"> <img src="~/Assets/login_useraa.png" alt="logoff" width="20em" height="20em">Logoff</a></li>
+                }
+            </ul>
+            
+        </nav>
+        
+    </header>
+
+    @RenderBody()
+    
+    <footer>
+
+        <address>
+
+        <p>Entre Em Contato: </p>
+
+        <p>Telefone:  XXXX-XXXX </p>
+                
+        <p>Email: roletop@hotmail.com </p>
+
+        <p>Endereço: </p>
+
+        <p>Rua Alameda Barão De Limeira, 539 - Santa Cecília, São Paulo</p>
+
+        </address>
+
+        <div id="facebook">
+
+            <a href="https://www.facebook.com/RolêTop-106506047400870/?modal=admin_todo_tour">
+
+                <img src="~/Assets/Facebook_Logo_(2019).png" alt="Nossa Página No Facebook">
+
+            </a>
+        
+        </div>
+
+    </footer>
+
+    </body>
+
+</html>

@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, li ,p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+body {
+    background-color: #f4b5ff93;
+}
+
+/*=======================================================
+
+                        Nav. - Start
+
+=======================================================*/
+
+header nav .menu-nav #logo-area {
+    margin: 0em .5em 0em 3.5em;
+}
+
+header nav .menu-nav  {
+    display: flex;
+    align-items: center;
+}
+
+.menu-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav li {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.menu-nav li {
+    padding: 2em;
+    margin: 0;
+}
+
+.menu-nav #login img {
+    margin: 0 .6em;
+}
+
+#login {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: auto;
+}
+
+.menu-nav li:hover {
+    background-color: #202020;
+    color: #383838;
+    box-shadow: 0 3px white;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    background-color:  #7d0093;
+}
+
+/*=======================================================
+
+Nav. - End
+
+=======================================================*/
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+    font-size: 3em;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    margin: 2em;
+    width: 20%;
+    border-radius: 5em;
+    color: rgb(255, 255, 255);
+    font-family: 'Fjalla One', sans-serif;
+}
+
+th, td {
+    padding: 5px;
+}
+
+th {
+    text-align: left;
+}
+
+#area-1, #area-2, #area-3, #area-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    background-color: #7d0093;
+    display: flex;
+    justify-content: center;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+table #coisas1, #coisas2, #coisas3, #coisas4 {
+    display: flex;
+    
+}
+
+
+#Baprova1, #Baprova2, #Baprova3, #Baprova4 {
+    font-family: 'Fjalla One', sans-serif;
+    color: rgb(255, 255, 255);
+    
+    font-size: 1em;
+    background-color: #15b300;
+    box-shadow: 0 3px #0b5f00;
+    border-radius: 1em;
+    padding: .3em;
+    border-style: none;
+    outline: none;
+    
+    padding: .1em .3em;
+}
+
+
+button:active {
+    background-color: #15b300;
+    box-shadow: 0 2px #0b5f00;
+    transform: translateY(4px);
+}
+
+#Brecusa1, #Brecusa2, #Brecusa3, #Brecusa4 {
+    font-family: 'Fjalla One', sans-serif;
+    color: rgb(255, 255, 255);
+    
+    font-size: 1em;
+    background-color: #b30000;
+    box-shadow: 0 3px #5f0000;
+    border-radius: 1em;
+    padding: .3em;
+    border-style: none;
+    outline: none;
+    
+    padding: .1em 1em;
+}
+
+#Brecusa1, #Brecusa2, #Brecusa3, #Brecusa4 {
+    display: flex;
+    justify-content: center;
+}
+
+button:active {
+    background-color: #b30000;
+    box-shadow: 0 4px #5f0000;
+    transform: translateY(4px);
+}
+
+/*=======================================================
+
+                    Footer - Start
+
+=======================================================*/
+
+footer {
+    background-color: #7d0093;
+}
+
+footer address {
+    color: #ffffff;
+    padding: 1em;
+}
+
+footer img {
+    width: 5em;
+    height: 5em;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+address {
+    justify-content: center;
+}
+
+#facebook {
+    align-self: center;
+    padding: 1em;
+}
+
+/*=======================================================
+
+                    Footer - End
+
+=======================================================*/

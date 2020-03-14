@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, li ,p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+body {
+    background-color: rgb(229, 238, 238);
+}
+/*=======================================================
+
+Nav. - Start
+
+=======================================================*/
+
+header nav .menu-nav #logo-area {
+    margin: 0em .5em 0em 3.5em;
+}
+
+header nav .menu-nav  {
+    display: flex;
+    align-items: center;
+}
+
+.menu-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav li {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.menu-nav li {
+    padding: 2em;
+    margin: 0;
+}
+
+nav li {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-nav #login img {
+    margin: 0 .6em;
+}
+
+#login {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: auto;
+}
+
+.menu-nav li:hover {
+    background-color: #202020;
+    color: #383838;
+    box-shadow: 0 3px white;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    background-color:  #7d0093;
+}
+
+/*=======================================================
+
+Nav. - End
+
+=======================================================*/
+/*=======================================================
+
+Sobre - Start
+
+=======================================================*/
+main {
+    background-image: url(../Assets/DSA.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
+}
+
+.sobreFinal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+}
+
+.sobreFinal img{
+    margin: 2em 0;
+    border-radius: .5em;
+    width: 700px;
+    height: 400px;
+}
+
+.sobreFinal p{
+    max-width: 1550px;
+    height: 400px;
+    font-size: 31px;
+    
+    color: #ffc600;
+    background-color: #7d0093;
+    box-shadow: 0 10px #520061;
+    border-radius: 3em 0 3em 0;
+    margin: 0 0 .5em 2em;
+    padding: 1em 2em;
+}
+
+.sobre h2{
+    font-size: 60px;
+    color: #ffffff;
+}
+
+.sobre p{
+    max-width: 1550px;
+    font-size: 20px;
+    
+    color: #ffc600;
+    background-color: #7d0093;
+    box-shadow: 0 10px #520061;
+    border-radius: 3em 0 3em 0;
+    margin: 2em 3em 1em;
+    padding: 1em 2em;
+}
+
+.fundadores{
+    display: flex;
+    flex-direction: column;
+}
+
+#ale, #cesar{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 2em;
+}
+
+#content-ale, #content-cesar{
+    display: flex;
+    flex-direction: column;
+}
+
+#content-ale img, #content-cesar img{
+    border-radius: 10em;
+    margin: 2em;
+    width: 250px;
+    height: 250px;
+}
+
+.sobre-ale, .sobre-cesar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sobre-ale p:nth-child(even), .sobre-cesar p:nth-child(even){
+    font-size: 20px;
+    color: #ffffff;
+    max-width: 1200px;
+}
+.nome{
+    color: #725900;
+    font-size: 25px;
+    background-color: #ffc600;
+    box-shadow: 0 10px #725900;
+    border-radius: 1.5em 0 1.5em 0;
+    padding: 1em 1em;
+    margin: 2em 0;
+}
+
+/*=======================================================
+
+Sobre - End
+
+=======================================================*/
+/*=======================================================
+
+                    Footer - Start
+
+=======================================================*/
+
+footer {
+    background-color: #7d0093;
+}
+
+footer address {
+    color: #ffffff;
+    padding: 1em;
+}
+
+footer img {
+    width: 5em;
+    height: 5em;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+address {
+    justify-content: center;
+}
+
+#facebook {
+    align-self: center;
+    padding: 1em;
+}
+
+/*=======================================================
+
+                    Footer - End
+
+=======================================================*/

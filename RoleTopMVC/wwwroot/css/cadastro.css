@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a, li ,p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+body {
+    background-color: rgb(229, 238, 238);
+    display: flex;
+    flex-direction: column;
+}
+
+/*=======================================================
+
+                    Nav. - Start
+
+=======================================================*/
+
+header nav .menu-nav #logo-area {
+    margin: 0em .5em 0em 3.5em;
+}
+
+header nav .menu-nav  {
+    display: flex;
+    align-items: center;
+}
+
+.menu-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav li {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.menu-nav li {
+    padding: 2em;
+    margin: 0;
+}
+
+.menu-nav #login img {
+    margin: 0 .6em;
+}
+
+#login {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: auto;
+}
+
+.menu-nav li:hover {
+    background-color: #202020;
+    color: #383838;
+    box-shadow: 0 3px white;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    background-color:  #7d0093;
+}
+
+/*=======================================================
+
+                    Nav. - End
+
+=======================================================*/
+
+/*=======================================================
+
+                    Formulários - Start
+
+=======================================================*/
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+    font-size: 3em;
+}
+
+#abraco {
+    border: 1px solid #CCC;
+    border-radius: 5em 0 5em 0;
+    margin: 0 3em 3em;
+    background-color: #f4b5ff93;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#abraco .information fieldset {
+    margin-top: 2em;
+}
+
+form fieldset {
+    width: 15em;
+    padding: 1em; 
+}
+
+form fieldset + fieldset {
+    margin-top: .5em;
+}
+
+fieldset {
+    border-style: none;
+}
+
+input:hover {
+    background-color: #e9e9e9
+}
+
+input {
+    width: 40em;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+#button button {
+    font-family: 'Fjalla One', sans-serif;
+    color: rgb(255, 255, 255);
+    
+    font-size: 2em;
+    background-color: #15b300;
+    box-shadow: 0 8px #0b5f00;
+    border-radius: 1em;
+    padding: .3em;
+    border-style: none;
+    outline: none;
+
+    padding: .1em .3em;
+}
+
+#button{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+#button button:active {
+  background-color: #15b300;
+  box-shadow: 0 4px #0b5f00;
+  transform: translateY(4px);
+}
+
+#cancel button {
+    font-family: 'Fjalla One', sans-serif;
+    color: rgb(255, 255, 255);
+    
+    font-size: 2em;
+    background-color: #b30000;
+    box-shadow: 0 8px #5f0000;
+    border-radius: 1em;
+    padding: .3em;
+    border-style: none;
+    outline: none;
+
+    padding: .1em 1em;
+}
+
+#cancel{
+    display: flex;
+    justify-content: center;
+}
+
+#cancel button:active {
+  background-color: #b30000;
+  box-shadow: 0 4px #5f0000;
+  transform: translateY(4px);
+}
+
+#alinha {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    margin: 2em;
+}
+
+/*=======================================================
+
+                    Formulários - End
+
+=======================================================*/
+
+/*=======================================================
+
+                    Footer - Start
+
+=======================================================*/
+
+footer {
+    background-color: #7d0093;
+}
+
+footer address {
+    color: #ffffff;
+    padding: 1em;
+}
+
+footer img {
+    width: 5em;
+    height: 5em;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    justify-self: flex-end;
+}
+
+address {
+    justify-content: center;
+}
+
+#facebook {
+    align-self: center;
+    padding: 1em;
+}
+
+/*=======================================================
+
+                    Footer - End
+
+=======================================================*/

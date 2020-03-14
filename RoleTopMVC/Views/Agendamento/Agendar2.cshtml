@@ -1,0 +1,167 @@
+@model RoleTopMVC.ViewModels.AgendamentoViewModel
+
+<main>
+
+    <section id="titles">
+
+            <h1><em><strong> Insira As Informações Do Evento </strong></em></h1>
+
+            <div class="h2s">
+
+                <form id="Finfo-you" asp-controller="Agendamento" asp-action="Agendar" method="GET">
+
+                <button type="submit" id="Binfo-you"><h2>Suas Informações</h2></button>
+                
+                </form>
+
+                <button><h2>Informações Do Evento</h2></button>
+                <button><h2>Pagamento</h2></button>
+
+            </div>
+
+    </section>
+
+    <section id="important">
+            <h1>Informações Importantes!</h1>
+    
+            <p>Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna. Enim lobortis scelerisque fermentum dui faucibus.
+            Faucibus purus in massa tempor nec feugiat. Sed viverra tellus in hac habitasse platea dictumst vestibulum.
+            Risus pretium quam vulputate dignissim suspendisse in est ante in. Pretium aenean pharetra magna ac placerat vestibulum lectus mauris.
+            Varius morbi enim nunc faucibus a. Nisl nisi scelerisque eu ultrices.
+            Non curabitur gravida arcu ac tortor. Id ornare arcu odio ut sem nulla.
+            Nec ultrices dui sapien eget mi proin sed libero enim. Tempor orci eu lobortis elementum nibh tellus
+            molestie nunc non. Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare.
+            In hendrerit gravida rutrum quisque non tellus orci ac. Aliquam faucibus purus in massa tempor.
+            Morbi non arcu risus quis varius quam. Vel fringilla est ullamcorper eget nulla facilisi etiam.
+            Suspendisse interdum consectetur libero id faucibus. Eu augue ut lectus arcu bibendum at varius vel pharetra.
+            Diam vel quam elementum pulvinar etiam non. Faucibus in ornare quam viverra orci sagittis eu volutpat.
+            Eu sem integer vitae justo eget magna. Eu feugiat pretium nibh ipsum consequat nisl vel pretium.
+            Urna molestie at elementum eu facilisis sed odio morbi. Sed risus ultricies tristique nulla.
+            Ornare lectus sit amet est. Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin.
+            Porttitor leo a diam sollicitudin. Pulvinar mattis nunc sed blandit libero.</p>
+
+    </section>
+
+    <section id="abraco">
+
+            <form class="information" action='@Url.Action("AgendamentoProcesso2", "Agendamento")' method="POST"> <!-- Mudar o Action para o que faz o registro do agendamento em si -->
+
+                <fieldset id="name-section">
+
+                    <label for="name-text">Nome Do Evento:</label>
+                    <input type="text" name="nName" id="name-text" maxlength="100" required>
+                
+                </fieldset>
+
+                <div id="alinha-select">
+
+                    <fieldset id="type-section">
+    
+                            <label for="type-select">Tipo De Evento:</label>
+                            <select name="nType" id="type-select" required> 
+                                <option>Balada</option>
+                                <option>Casamento</option>
+                                <option>Festa</option>
+                                <option>Show</option>
+                                <option>Convenção</option>
+                                <option>Palestra</option>
+                                <option>Outros (Especificar)</option>
+                            </select>
+
+                    </fieldset>
+        
+                    <fieldset id="status-section">
+    
+                        <label for="status-select">Status Do Evento:</label>
+                        <select name="nStatus" id="status-select" required> 
+                            <option>Evento Privado</option>
+                            <option>Evento Público</option>
+                        </select>
+
+                    </fieldset>  
+
+                    <fieldset id="plan-section">
+
+                            <label for="plan-select">Planos:</label>
+                            <select name="nPlan" id="plan-select" required> 
+                                <option value="" disabled selected>Selecione</option>
+                                @foreach (var plano in Model.Planos)
+                                {
+                                    <option value="@plano.Nome">@plano.Nome por @plano.Preco </option>
+                                }
+                                <!-- <option>Plano De Iluminação</option>
+                                <option>Plano De Som</option>
+                                <option>Plano De Iluminação E De Som</option> -->
+                            </select>
+
+                    </fieldset>
+
+                </div>
+
+                </fieldset>
+    
+                <fieldset id="number-section">
+
+                        <label for="number">Número De Pessoas No Evento (Aproximadamente):</label>
+                        <input type="number" name="nNumber" id="number" min="5" max="250" step="5" placeholder="Mín. 5, Máx. 250" required>
+                    
+                </fieldset>
+
+                <fieldset id="date-section">
+
+                        <label for="date">Data Do Evento:</label>
+                        <input type="date" name="nDate" id="date" min="2019-12-01" max="2022-12-31" required>
+                    
+                </fieldset>
+
+                <fieldset id="timeS-section">
+
+                        <label for="time-start">Horário De Inicialização:</label>
+                        <input type="time" name="nTimeS" id="time-start" required>
+                
+                </fieldset>
+
+                <fieldset id="timeE-section">
+
+                        <label for="time-end">Horário De Termino:</label>
+                        <input type="time" name="nTimeE" id="time-end" required>
+                
+                </fieldset>
+
+                <fieldset id="mesage">
+
+                        <label for="mesage-camp">Descreva o Evento:</label>
+                        <textarea name="nMesage" id="mesage-camp" cols="35" rows="10" required></textarea>
+                    
+                </fieldset>
+
+                <fieldset id="check-section">
+
+                        <Label for="check">Li E Concordo Com Os <a href="termos.html">Termos De Contrato</a></Label>
+                        <input type="checkbox" name="nCheck" id="check" required>
+                
+                </fieldset>
+
+
+<div id="alinha">
+
+                <div id="button">
+
+                    <button type="submit">Confirmar</button>
+                    
+                </div>
+                
+                
+            </form>
+            
+            <form id="cancel" method="GET">
+
+                    <button type="submit">Voltar</button>
+                
+            </form>
+
+</div>
+
+    </section>
+
+</main>

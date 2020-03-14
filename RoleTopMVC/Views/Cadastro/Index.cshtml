@@ -1,0 +1,78 @@
+<main>
+    <h1>Cadastre-se</h1>
+
+    <section id="abraco">
+
+
+        <form class="information" action='@Url.Action("CadastrarCliente", "Cadastro")' method="POST">
+
+                <fieldset id="name-section">
+
+                    <label for="name-text">Seu Nome:</label>
+                    <input type="text" name="nName" id="name-text" placeholder="Nome Completo" maxlength="100" required>
+                
+                </fieldset>
+
+                <fieldset id="cpf-section">
+
+                    <label for="cpf-text">CPF ou CNPJ:</label>
+                    <input type="text" name="nCpf" id="cpf-text" maxlength="14" placeholder="XXX.XXX.XXX-YY (CPF) Ou XX.XXX.XXX/YYYY-ZZ (CNPJ)" required>
+                
+                </fieldset>
+
+                <fieldset id="email-section">
+
+                    <label for="email-text">Email:</label>
+                    <input type="email" name="nEmail" id="email-text" required>
+                    
+                </fieldset>
+
+                <fieldset id="password-section">
+
+                    <label for="password-text">Senha:</label>
+                    <input type="password" name="nPassword" id="password-text" required>
+                    
+                </fieldset>
+
+                <fieldset id="password2-section">
+
+                    <label for="password2-text">Confirmar Senha:</label>
+                    <input type="password" name="nPassword2" id="password2-text" required>
+                    
+                </fieldset>
+    
+                <fieldset id="phone-section">
+
+                    <label for="phone-text">Telefone:</label>
+                    <input type="text" name="nPhone" id="phone-text" placeholder="(XX)-9xxxx-xxxx" maxlength="15">
+                    
+                </fieldset>
+
+                <fieldset id="check-section">
+
+                    <Label for="check">Li E Concordo Com Os <a href="termos.html">Termos De Contrato</a></Label>
+                    <input type="checkbox" name="nCheck" id="check" required>
+                
+                </fieldset>
+
+<div id="alinha">
+
+                <div id="button">
+
+                    <button type="submit">Confirmar</button>
+                    
+                </div>
+                
+                
+            </form>
+            
+            <form id="cancel" action="login.html" method="POST">
+
+                    <button type="submit">Voltar</button>
+                
+            </form>
+
+</div>
+
+    </section>
+</main>
